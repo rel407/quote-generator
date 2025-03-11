@@ -1,0 +1,216 @@
+/* Global styles */
+body {
+    font-family: 'Tinos', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(45deg , lightblue, #87ceeb, blue, darkblue);
+}
+
+h1 {
+    font-family: 'Charm', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    color: #eee;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transition: 1s;
+}
+
+/* Quote container styles */
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+}
+
+.quote-container p {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+#quote {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #eee;
+    text-align: center;
+}
+
+#author {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #fff;
+    text-align: right;
+}
+
+#quote-button {
+    margin-top: 20px;
+}
+
+#icon-button {
+    margin: auto;
+}
+
+#quote-contain {
+    height: 200px;
+    width: 100%;
+}
+
+#author-contain {
+    height: 50px;
+    width: 100%;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    .quote-container {
+        padding: 20px;
+        height: auto;
+    }
+
+    .quote-container p {
+        font-size: 1.2rem;
+    }
+
+    #quote {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #author {
+        font-size: .75rem;
+        text-align: right;
+    }
+
+    #quote-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Tablet styles */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .quote-container {
+        padding: 30px;
+        height: auto;
+    }
+
+    #quote {
+        font-size: 1.25rem;
+    }
+
+    #author {
+        font-size: 1rem;
+    }
+
+    #quote-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .quote-container {
+        max-width: 800px;
+        margin: 0 auto;
+        height: 80vh;
+    }
+
+    #quote {
+        font-size: 1.75rem;
+    }
+
+    #author {
+        font-size: 1.25rem;
+    }
+
+    #quote-button {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a {
+    color: #00aced;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    transition: 1s;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.icon {
+    width: 25px;
+    filter: invert(100%) brightness(100%);
+}
+
+.icon:hover {
+    filter: invert(55%) sepia(56%) saturate(2555%) hue-rotate(184deg) brightness(99%) contrast(98%);
+    transition: 1s;
+}
+
+/* Mobile footer */
+@media screen and (max-width: 600px) {
+    footer a {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+/* Tablet footer */
+@media screen and (max-width: 768px) {
+    footer a {
+        padding: 0 20px;
+    }
+}
