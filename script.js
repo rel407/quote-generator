@@ -8,7 +8,8 @@ document.getElementById("quote-button").addEventListener("click", function() {
     document.getElementById("quote").textContent = "Loading...";
     document.getElementById("author").textContent = "";
 
-    fetch("http://127.0.0.1:5000/random_quote")
+    //fetch("http://127.0.0.1:5000/random_quote")
+    fetch("https://https://quote-generator-mu-henna.vercel.app/api/database")
         .then(response => response.json())
         .then(data => {
             console.log("Data received:", data);
