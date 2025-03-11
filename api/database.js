@@ -10,10 +10,12 @@ export default async function handler(req, res) {
       driver: sqlite3.Database
     });
 
-    // Example query: Fetching all rows from two tables (quotes and authors)
-    // Replace 'quotes' and 'authors' with your actual table names
-    const quotes = await db.all('SELECT * FROM quotes');
-    const authors = await db.all('SELECT * FROM authors');
+    // Query the quotes table, joining with the authors table to get author names
+    const quotes = await db.all(`
+      SELECT quotes.quote_id, quotes.quote, authors.author_name
+      FROM quotes
+      JOIN authors ON quotes.author_id = authors.author_id
+    `);
 
     // Close the database
     await db.close();
